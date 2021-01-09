@@ -1,0 +1,91 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  color: #606060;
+  margin: 0 auto;
+}
+
+header {
+  background-color: rgb(16, 16, 145);
+  color: white;
+  padding: 15px 0 12px 0;
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1,
+h2,
+legend {
+  font-size: 1.1em;
+  font-weight: bolder;
+}  
+
+p {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 0.95em;
+  font-weight: lighter;
+  color: #a2a2a2;
+}
+
+form {
+  max-width: 860px;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.secondary-header,
+footer {
+  margin: 10px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.secondary-header {
+  border-bottom: 3px solid #333;
+  margin-bottom: 5px;
+}
+
+fieldset {
+  border:none;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  padding-top: 15px;
+}
+
+label {
+  display: inline-flex; 
+  margin-top: 1.5rem;
+  font-size: 1em;
+}
+input, textarea , select {
+  display: block; 
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px; 
+  font-size: 18px;
+  color: #333;
+}
+
+hr {
+  border-top: 1px solid #333;
+  margin: 0 10px;
+}
+
+.radio-input {
+  max-width: 860px;
+  display:flex;
+}
