@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-color: blue;
+  background-color: #0C1EC5;
   color: white;
   padding: 20px 0 15px;
   margin-bottom: 10px;
@@ -34,6 +34,10 @@ h2 {
   padding-top: 0.7em;
 }
 
+.tagline {
+  max-width: 860px;
+  margin: 0 auto;
+}
 .tagline p {
   text-align: center;
   padding: 0 1em 1em;
@@ -43,24 +47,25 @@ h2 {
 
 footer {
   text-align: center;
-  font-size: 1em;
+  font-size: 0.8em;
   font-style: italic;
-  margin-bottom: 2em;
+  margin: 2em;
 }
 /*======================================================================
 Form Styles
 =======================================================================*/
 
-form {
-  max-width: 860px;
-  margin: 0 auto;
+.form {
+  max-width: 800px;
 }
 
 .container {
+  max-width: 860px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   padding: 0 0.5em;
+  margin: 0 auto;
 }
 
 .contact-info,
@@ -101,16 +106,15 @@ input[type=tel],
 input[type=email],
 textarea,
 select {
-  display: flex;
-  flex-direction: row; 
+  display: block;
   width: 100%;
   margin: 7px 0;
   padding: 15px; 
-  font-size: 18px;
   color: #606060;
   background-color: #f5f5f5;
   border: none;
   border-radius: 6px;
+  transition: background-color 1s;
 }
 .contact{
   margin-top: 10px;
@@ -118,6 +122,11 @@ select {
 #zip {
   max-width: 180px;
 }
+
+textarea {
+  height: 120px;
+}
+
 input[type=checkbox],
 input[type=radio] {
 
@@ -126,13 +135,7 @@ input[type=radio] {
   
 }
 
-input::placeholder {
-  text-align: right;
-  font-size: 0.8em;
-  color: #8d8d8d;
-  font-style: italic;
-  padding-right: 5px;
-}
+
 
 .check-input,
 .radio-input {
@@ -148,7 +151,7 @@ margin: 1.3em 0;
 }
 
 button {
-  background-color: rgb(11, 204, 188);
+  background-color: #07C2B2;
   color: white;
   width: 100%;
   padding: 20px;
@@ -168,13 +171,46 @@ button {
 }
 
 
+
+
 /*======================================================================
 Pseudo classes
 =======================================================================*/
 
 
+  :focus{
+    outline: 1px auto #07C2B2;
+  }
+
+  button:focus {
+    outline: 1px auto #606060;
+  }
+
+  button:hover {
+    background-color: #4de6d9;
+    color: #606060;
+    
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    background-color: white;
+  } 
 
 
+  input::placeholder,
+  select {
+    text-align: right;
+    font-size: 0.9em;
+    color: #979797;
+    font-style: italic;
+    padding-right: 5px;
+  }
+
+  input[id="address"]::placeholder{
+    text-align: left;
+  }
 
 /*======================================================================
 Media Queries
@@ -182,19 +218,38 @@ Media Queries
 
 @media (min-width:768px) {
 
-  input[type=text],
-  input[type=tel],
-  input[type=email],
-  select {
-    display: inline-flex;
-    flex-direction: row;
-    width: 80%;
-    margin-left: 2em;
+  body {
+    background-color: #f1f1f1;
   }
 
-  .input-box {
-    flex-basis: 50%;
-    align-self: flex-end;
+  .container {
+    background-color: white;
+    border-radius: 10px;
   }
+
+  .border1,
+  .border2 {
+    display: none;
+  }
+
+  button {
+    margin-bottom: 25px;
+  }
+  .contact {
+    display: flex; 
+    flex-direction: row;
+ }
+
+ .contact input, select {
+    flex-basis: 80%;
+ }
+
+ .contact label {
+    flex-basis: 20%;  
+ }
+
+ .contact input[type="numeric"] {
+    flex-basis: 40%;
+}
 
 }
