@@ -99,6 +99,7 @@ label {
   margin-top: 15px; 
   text-align: left; 
   padding: 5px 0;
+  font-size: 0.9em;
 }
 
 input[type=text],
@@ -115,6 +116,7 @@ select {
   border: none;
   border-radius: 6px;
   transition: background-color 1s;
+  font-size: 0.9em;
 }
 .contact{
   margin-top: 10px;
